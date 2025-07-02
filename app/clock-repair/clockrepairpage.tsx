@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Clock, MapPin, Phone, Calendar, Wrench, CheckCircle, MessageCircle } from 'lucide-react';
+import { Clock, MapPin, Phone, Calendar, Wrench, CheckCircle, MessageCircle, Upload, Image, X } from 'lucide-react';
 import { AuthProvider, useAuth } from "../../contexts/AuthContext";
 import { supabase } from "../../lib/supabase";
 import AuthModal from '../../components/auth/AuthModal';
@@ -24,6 +24,11 @@ interface FormData {
   preferredDate: string;
   preferredTime: string;
   additionalNotes: string;
+}
+
+interface UploadedImage {
+  file: File;
+  previewUrl: string;
 }
 
 const ClockRepair = () => {
@@ -60,6 +65,9 @@ const ClockRepairContent = () => {
   const [submitting, setSubmitting] = useState(false);
   const [showAuthModal, setShowAuthModal] = useState(false);
   const [authModalMode, setAuthModalMode] = useState<'login' | 'signup'>('login');
+  const [uploadedImages, setUploadedImages] = useState<UploadedImage[]>([]);
+  const [imageUrls, setImageUrls] = useState<string[]>([]);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -79,6 +87,15 @@ const ClockRepairContent = () => {
     }
   }, [user, profile]);
 
+  // Clean up object URLs when component unmounts
+  useEffect(() => {
+    return () => {
+      uploadedImages.forEach(image => {
+        URL.revokeObjectURL(image.previewUrl);
+      });
+    };
+  }, [uploadedImages]);
+
   const checkAuthAndExecute = (action: () => void, mode: 'login' | 'signup' = 'login') => {
     if (!user) {
       setAuthModalMode(mode);
@@ -94,6 +111,66 @@ const ClockRepairContent = () => {
       ...prev,
       [name]: value
     }));
+  };
+
+  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files.length > 0) {
+      const newImages = Array.from(e.target.files).map(file => ({
+        file,
+        previewUrl: URL.createObjectURL(file)
+      }));
+
+      setUploadedImages(prev => [...prev, ...newImages]);
+      
+      // Upload images to Supabase storage and get URLs
+      uploadImagesToSupabase(Array.from(e.target.files));
+    }
+  };
+
+  const uploadImagesToSupabase = async (files: File[]) => {
+    try {
+      const urls = await Promise.all(
+        files.map(async (file) => {
+          const fileExt = file.name.split('.').pop();
+          const fileName = `${Math.random()}.${fileExt}`;
+          const filePath = `clock-repairs/${fileName}`;
+
+          const { data, error } = await supabase.storage
+            .from('repair-watches')
+            .upload(filePath, file);
+
+          if (error) throw error;
+
+          const { data: { publicUrl } } = supabase.storage
+            .from('repair-watches')
+            .getPublicUrl(filePath);
+
+          return publicUrl;
+        })
+      );
+
+      setImageUrls(prev => [...prev, ...urls]);
+    } catch (error) {
+      console.error('Error uploading images:', error);
+    }
+  };
+
+  const removeImage = (index: number) => {
+    const newImages = [...uploadedImages];
+    URL.revokeObjectURL(newImages[index].previewUrl);
+    newImages.splice(index, 1);
+    setUploadedImages(newImages);
+    
+    // Also remove the corresponding URL
+    const newUrls = [...imageUrls];
+    newUrls.splice(index, 1);
+    setImageUrls(newUrls);
+  };
+
+  const triggerFileInput = () => {
+    if (fileInputRef.current) {
+      fileInputRef.current.click();
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -120,9 +197,10 @@ const ClockRepairContent = () => {
             preferred_date: formData.preferredDate,
             preferred_time: formData.preferredTime,
             additional_notes: formData.additionalNotes,
-            status: 'pending'
+            status: 'pending',
+            image_urls: imageUrls
           })
-          .select(); // Add .select() to get the inserted data
+          .select();
 
         if (error) {
           console.error('Error submitting clock repair request:', error);
@@ -149,7 +227,7 @@ const ClockRepairContent = () => {
 
   const handleWhatsAppContact = () => {
     checkAuthAndExecute(() => {
-      const message = `Hi! I need clock repair service. Here are my details:
+      let message = `Hi! I need clock repair service. Here are my details:
 
 Name: ${formData.fullName}
 Contact: ${formData.contactNumber}
@@ -158,10 +236,18 @@ Clock Type: ${formData.clockType}
 Brand/Model: ${formData.brand} ${formData.model}
 Issue: ${formData.issueDescription}
 Preferred Date/Time: ${formData.preferredDate} at ${formData.preferredTime}
-Additional Notes: ${formData.additionalNotes}
+Additional Notes: ${formData.additionalNotes}`;
 
-Please confirm the pickup details.`;
-      
+      // Add image URLs if available
+      if (imageUrls.length > 0) {
+        message += `\n\nUploaded Images:`;
+        imageUrls.forEach((url, index) => {
+          message += `\nImage ${index + 1}: ${url}`;
+        });
+      }
+
+      message += `\n\nPlease Quote the best.`;
+
       const whatsappUrl = `https://wa.me/919821964539?text=${encodeURIComponent(message)}`;
       window.open(whatsappUrl, '_blank');
     });
@@ -487,6 +573,7 @@ Please confirm the pickup details.`;
                     className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
                     <option value="">Select clock type</option>
+                    <option value="wall">Wrist Watches</option>
                     <option value="wall">Wall Clock</option>
                     <option value="table">Table Clock</option>
                     <option value="grandfather">Grandfather Clock</option>
@@ -523,6 +610,58 @@ Please confirm the pickup details.`;
                   className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Describe the problem with your clock (e.g., not working, slow time, broken hands, etc.)"
                 />
+              </div>
+            </div>
+
+            {/* Image Upload Section */}
+            <div className="border-t border-gray-200 dark:border-gray-700 pt-6">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+                Upload Images of Your Clock/Watch
+              </h3>
+              
+              <div className="space-y-4">
+                <div 
+                  onClick={triggerFileInput}
+                  className="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-6 text-center cursor-pointer hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-gray-700 transition-colors"
+                >
+                  <Upload className="h-10 w-10 text-gray-400 mx-auto mb-3" />
+                  <p className="text-gray-600 dark:text-gray-400 mb-2">
+                    Click to upload images or drag and drop
+                  </p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    Upload clear images of your clock/watch from multiple angles (Max 5 images)
+                  </p>
+                  <input
+                    type="file"
+                    ref={fileInputRef}
+                    onChange={handleImageUpload}
+                    multiple
+                    accept="image/*"
+                    className="hidden"
+                    max={5}
+                  />
+                </div>
+                
+                {uploadedImages.length > 0 && (
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                    {uploadedImages.map((image, index) => (
+                      <div key={index} className="relative group">
+                        <img
+                          src={image.previewUrl}
+                          alt={`Uploaded clock ${index + 1}`}
+                          className="w-full h-32 object-cover rounded-lg"
+                        />
+                        <button
+                          type="button"
+                          onClick={() => removeImage(index)}
+                          className="absolute top-2 right-2 bg-red-500 text-white rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity"
+                        >
+                          <X className="h-4 w-4" />
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
 
