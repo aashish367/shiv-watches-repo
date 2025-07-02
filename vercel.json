@@ -1,0 +1,3213 @@
+{
+  "redirects": [
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks/b4103600-35d8-406c-9f61-ef3f4c54c583",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "154"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/affiliate",
+      "destination": "/products",
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "200"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks/b5f9ae02-2606-4f53-8b9e-b8a138b3a2f5",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "14"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks/271db021-62bb-4dda-9eeb-b4df08ca8052",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "27"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/pages/terms.php",
+      "destination": "/products",
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "121"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/table-clocks/d30c21f7-f661-4fc8-adde-f9604023e393",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "186"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/table-clocks/ebb0aaef-8ec1-45d1-a889-3db886772627",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "46"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/repair",
+      "destination": "/clock-repair",
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "184"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "864"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/pages/about-us",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/table-clocks/31ef917b-33ff-4b0c-9ab6-a0b2f5bad275",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "187"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "category",
+          "value": "Wall clock"
+        },
+        {
+          "type": "query",
+          "key": "page",
+          "value": "7"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/accessories/49f1797f-c137-4963-8799-7ccd1b88a2ee",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "17"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "99"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks/bd5a594b-10d6-412b-8aaa-868cdc7a0047",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "29"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "156"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "160"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/home-appliances",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "62"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "79"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/home-appliances",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "54"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "195"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wrist-watches",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "209"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/accessories/15371fad-4179-4910-8e96-c3049c41893e",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "66"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/table-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "215"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "228"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks/8e43780e-dd72-491c-a196-1e295fd68597",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "39"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/products/accessories",
+      "has": [
+        {
+          "type": "query",
+          "key": "category",
+          "value": "Button Battery"
+        },
+        {
+          "type": "query",
+          "key": "page",
+          "value": "2"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "198"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "223"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks/27f96d9f-a281-457e-9549-4d8a86b3ce48",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "135"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/table-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "216"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/table-clocks/7edad299-110f-4a76-9027-833fcb708247",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "15"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/accessories/d3a4db1b-1ee7-4990-b0ab-90bde0e21c0b",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "128"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "204"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks/24e4c8a2-a625-47f9-8f7a-dce81cd173da",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "152"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wrist-watches",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "207"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/products/accessories",
+      "has": [
+        {
+          "type": "query",
+          "key": "category",
+          "value": "Watch straps"
+        },
+        {
+          "type": "query",
+          "key": "page",
+          "value": "1"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "99"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "180"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/accessories",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "85"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/products/accessories",
+      "has": [
+        {
+          "type": "query",
+          "key": "category",
+          "value": "Button battery"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks/2860b584-0ff7-452b-a93c-7a7fd0d7d105",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "150"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks/271db021-62bb-4dda-9eeb-b4df08ca8052",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "27"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "227"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "179"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "197"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/accessories",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "88"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks/b7d1b5ac-9eb5-40ca-bb12-27dc928a97ce",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "149"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/accessories/15371fad-4179-4910-8e96-c3049c41893e",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "66"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "category",
+          "value": "Wall clock"
+        },
+        {
+          "type": "query",
+          "key": "page",
+          "value": "6"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "221"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/accessories",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "81"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "33"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "97"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wrist-watches",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "170"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "22"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "96"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/accessories",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "82"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks/9d9d017d-6284-4fba-b1b6-1eba8755c35e",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "129"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks/623aa213-a202-4c1e-96e1-92737e271da9",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "141"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "159"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks/64d60fad-946f-4a32-8de8-059c5f1c4519",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "166"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks/0971a411-d773-4ad0-8c90-369ee1c204f1",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "30"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "41"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "199"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks/a3464d21-357d-4f6e-9485-6e7caffd63c0",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "131"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wrist-watches",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "112"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks/3a9b15fa-e935-4d9f-9282-f66b53f382bf",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "138"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "206"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "80"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "22"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/table-clocks/900d5202-b903-4550-b81b-20951e6f45bc",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "42"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "202"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "28"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "198"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks/e67fe2e5-674e-4308-802e-33153eb6ff92",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "175"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "18"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/home-appliances",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "64"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/home-appliances",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "51"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "category",
+          "value": "Wall clock"
+        },
+        {
+          "type": "query",
+          "key": "page",
+          "value": "5"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks/401eb06c-2667-489e-ba37-57417a603983",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "146"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "161"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wrist-watches",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "210"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/products/wrist-watches",
+      "has": [
+        {
+          "type": "query",
+          "key": "category",
+          "value": "Watches"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/table-clocks/6ceb084b-3e4e-42df-802d-405905509427",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "43"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/accessories",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "125"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "category",
+          "value": "Wall clock"
+        },
+        {
+          "type": "query",
+          "key": "page",
+          "value": "4"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks/231bbfc7-8a29-42e9-b44c-56ccd2d5ea08",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "36"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/products/table-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "category",
+          "value": "Desk clock"
+        },
+        {
+          "type": "query",
+          "key": "page",
+          "value": "2"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wrist-watches",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "117"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "77"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "78"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "38"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/accessories",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "125"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks/de310af2-2550-4a3c-814b-48aff9cc8f6e",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "145"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks/2860b584-0ff7-452b-a93c-7a7fd0d7d105",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "150"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks/b03ccfe1-b572-416c-a1fd-99f794dfb4de",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "140"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wrist-watches",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "111"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "155"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "222"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "category",
+          "value": "Wall clock"
+        },
+        {
+          "type": "query",
+          "key": "page",
+          "value": "1"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks/3b218d64-1e07-45ec-bfa0-08cf602ff9f6",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "137"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "224"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "205"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/accessories",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "85"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "75"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks/c11dc3f4-1b2b-46bf-a1dd-85b23cbfc170",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "153"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/accessories/184c0778-ca98-4da9-a485-82b2eeb3351b",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "74"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks/6facd76a-7a6d-424f-96f8-26505d60d048",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "167"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks/2ad87901-a698-4ecd-b00b-c9fb69e5b71a",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "144"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks/b03ccfe1-b572-416c-a1fd-99f794dfb4de",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "140"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks/ef9ad01b-91db-455b-9b04-03bdceda807f",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "134"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wrist-watches",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "113"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks/9d9d017d-6284-4fba-b1b6-1eba8755c35e",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "129"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks/9d1cd9a4-48ef-4823-99e4-824689dcd1b6",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "148"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "23"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/table-clocks/d30c21f7-f661-4fc8-adde-f9604023e393",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "186"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wrist-watches",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "120"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "37"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks/2c0e7aac-2ed4-456f-bc1e-eb0fece6d92f",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "24"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "181"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/home-appliances",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "52"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks/74d9838a-f7ff-4070-89b6-1ed95960803a",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "147"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/products/accessories",
+      "has": [
+        {
+          "type": "query",
+          "key": "category",
+          "value": "Clock Movements"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks/6bd33a53-e113-4ca4-9ff6-8f1f071edf90",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "132"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/table-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "45"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "108"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/accessories",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "84"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/table-clocks/a2a77013-548b-4d6d-a51d-31eb722a1ec7",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "44"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/table-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "218"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/table-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "219"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/table-clocks/6ceb084b-3e4e-42df-802d-405905509427",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "43"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/accessories",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "168"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/products/accessories",
+      "has": [
+        {
+          "type": "query",
+          "key": "category",
+          "value": "Alkaline battery"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "158"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/home-appliances",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "62"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "181"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "183"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/home-appliances",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "47"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/home-appliances",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "63"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "97"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "194"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/accessories/d3a4db1b-1ee7-4990-b0ab-90bde0e21c0b",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "128"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/home-appliances",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "55"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wrist-watches",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "169"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks/5249ca9f-1f65-43f7-b1d9-41bbffd39368",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "178"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/table-clocks/3de0a4e1-c4a5-4a92-bb91-51e6e7beec70",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "189"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/accessories/efd31a57-65e6-41b5-8111-16885363202b",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "68"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "191"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/products/wrist-watches",
+      "has": [
+        {
+          "type": "query",
+          "key": "category",
+          "value": "Watches"
+        },
+        {
+          "type": "query",
+          "key": "page",
+          "value": "1"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "104"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "192"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/accessories/d762501d-426a-41f0-bdea-a44a0db2b8ac",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "123"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/accessories",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "73"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/table-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "21"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "25"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "category",
+          "value": "Wall clock"
+        },
+        {
+          "type": "query",
+          "key": "page",
+          "value": "3"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/home-appliances",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "49"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/home-appliances",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "118"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/accessories",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "69"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks/436e4963-6ebd-4219-8b1d-f8710a447d26",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "130"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks/64bb4fd3-0679-4e3e-a346-6d871b04babd",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "165"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/accessories/dd25d314-ba5d-4285-9074-7c59d8ab8873",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "126"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/accessories",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "89"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/accessories/2c44ff2e-2e4f-4755-8718-1bbcf482d384",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "124"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "225"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "106"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/home-appliances",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "53"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "34"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks/d6dc3c3e-1a50-43ca-b7cb-19e6c8c358fe",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "164"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks/41b6c663-31dd-4157-9020-0799d2c10172",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "136"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wrist-watches",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "208"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/table-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "217"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/accessories",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "182"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "category",
+          "value": "Glasses"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "151"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/accessories/8d9b59cd-1579-47e3-b799-4ba5551c99f7",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "67"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks/4e6f4bbd-bd24-4d97-8391-a9e6dcee16c3",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "139"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wrist-watches",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "171"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "19"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wrist-watches",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "173"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/accessories/8fe35ee1-bbef-4a78-a9f8-b24223e5a1b9",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "127"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/accessories",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "70"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/table-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "220"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks/cd068489-0fcb-4608-9f09-1eb66aa28907",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "176"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/products",
+      "has": [
+        {
+          "type": "query",
+          "key": "category",
+          "value": "Audio Accessories"
+        },
+        {
+          "type": "query",
+          "key": "page",
+          "value": "2"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "203"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "35"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wrist-watches",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "115"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/accessories",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "87"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "226"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks/57e85be2-abfa-4a57-ab8a-6a8dfa4aabc0",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "143"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "201"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/accessories",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "83"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/table-clocks/2aab0bc1-0e66-4824-b0f5-52021a5dccce",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "190"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wrist-watches",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "114"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "105"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/accessories",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "72"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/home-appliances",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "50"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/home-appliances",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "93"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "category",
+          "value": "Wall clock"
+        },
+        {
+          "type": "query",
+          "key": "page",
+          "value": "2"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "100"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/home-appliances",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "57"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/products/table-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "category",
+          "value": "Desk clock"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "196"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/home-appliances",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "91"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wrist-watches",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "174"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/home-appliances",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "94"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "185"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "76"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "20"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "category",
+          "value": "Wall clock"
+        },
+        {
+          "type": "query",
+          "key": "page",
+          "value": "8"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "98"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/home-appliances",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "61"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wrist-watches",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "172"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wrist-watches",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "211"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/products/home-appliances",
+      "has": [
+        {
+          "type": "query",
+          "key": "category",
+          "value": "heaters"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks/46eef105-59cb-42f2-9553-e971b21febe0",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "142"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/products",
+      "has": [
+        {
+          "type": "query",
+          "key": "category",
+          "value": "Audio Accessories"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/files/SHIVWATCHES_wallclocks.pdf",
+      "destination": "/products/wall-clocks",
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/accessories/6508e559-0535-49ca-8907-ad905d4f3fb7",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "65"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/table-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "213"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/products/accessories",
+      "has": [
+        {
+          "type": "query",
+          "key": "category",
+          "value": "Alkaline battery"
+        },
+        {
+          "type": "query",
+          "key": "page",
+          "value": "1"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "103"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "category",
+          "value": "Wall clock"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/accessories/b6c3fe33-3e36-403f-994b-a2205b7f86ed",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "16"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/products/wrist-watches",
+      "has": [
+        {
+          "type": "query",
+          "key": "category",
+          "value": "Watches"
+        },
+        {
+          "type": "query",
+          "key": "page",
+          "value": "2"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "110"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/home-appliances",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "60"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/table-clocks/2333c435-9873-4f46-ab1e-73968ed62cfd",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "188"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "107"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/products/home-appliances",
+      "has": [
+        {
+          "type": "query",
+          "key": "category",
+          "value": "Home appliances"
+        },
+        {
+          "type": "query",
+          "key": "page",
+          "value": "1"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks/142398ec-f5b8-449d-8ada-5e0b5692ceed",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "26"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/table-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "214"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "109"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks/ccc3b266-c2bb-4b61-805c-46582b52de5e",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "133"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "193"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "193"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "31"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "162"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/home-appliances/86e36a42-fc83-4a0a-b54d-d74dd7db76cc",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "862"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wall-clocks/7def7d38-bdaa-4a81-9c6a-b1135fbe4c00",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "177"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/home-appliances",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "95"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks/bd5a594b-10d6-412b-8aaa-868cdc7a0047",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "32"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wrist-watches",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "122"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wrist-watches",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "116"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/products/accessories",
+      "has": [
+        {
+          "type": "query",
+          "key": "category",
+          "value": "Watch straps"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/products/accessories",
+      "has": [
+        {
+          "type": "query",
+          "key": "category",
+          "value": "Button battery"
+        },
+        {
+          "type": "query",
+          "key": "page",
+          "value": "2"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/wrist-watches",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "212"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/products/table-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "category",
+          "value": "table-clock"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/files/alkaline-batteries.pdf",
+      "destination": "/products/accessories",
+      "permanent": true
+    },
+    {
+      "source": "/files/wall-clock.pdf",
+      "destination": "/products/wall-clocks",
+      "permanent": true
+    },
+    {
+      "source": "/product-detail",
+      "destination": "/products/home-appliances",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "59"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/products/home-appliances",
+      "has": [
+        {
+          "type": "query",
+          "key": "category",
+          "value": "Home appliances"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "category",
+          "value": "Water Purifier"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "157"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/products.php",
+      "destination": "/products",
+      "has": [
+        {
+          "type": "query",
+          "key": "page",
+          "value": "13"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.php",
+      "destination": "/products/home-appliances",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "92"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/products.php",
+      "destination": "/products/accessories",
+      "has": [
+        {
+          "type": "query",
+          "key": "category",
+          "value": "Button battery"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/products.php",
+      "destination": "/products/wall-clocks",
+      "has": [
+        {
+          "type": "query",
+          "key": "category",
+          "value": "Wall clock"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/products.php",
+      "destination": "/products",
+      "permanent": true
+    },
+    {
+      "source": "/products.php",
+      "destination": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "category",
+          "value": "Water Purifier"
+        }
+      ],
+      "permanent": true
+    }
+  ]
+}
