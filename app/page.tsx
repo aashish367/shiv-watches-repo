@@ -8,7 +8,7 @@ import WhyChooseUs from '../components/home/WhyChooseUs';
 import Testimonials from '../components/home/Testimonials';
 import InquiryCTA from '../components/home/InquiryCTA';
 import ClockRepairScheduling from '../components/home/clockrepairCTA';
-
+import DealPopup from '@/components/home/popUp';
 export default function Home() {
   return (
     <div>
@@ -19,6 +19,7 @@ export default function Home() {
       <WhyChooseUs />
       <Testimonials />
       <InquiryCTA />
+        <DealPopup />
     </div>
   );
 }
