@@ -7,15 +7,16 @@ import { QuoteProvider } from "@/contexts/QuoteContext";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import { Toaster } from 'react-hot-toast';
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Shiv Watches - Wholesale Watch Accessories & Clocks',
   description: 'Your trusted wholesale partner for watches, clocks, and home appliances at competitive prices.',
-   icons: {
-    icon: "/images/fevicon.png", 
+  icons: {
+    icon: "/images/fevicon.png",
   },
 };
 
@@ -34,6 +35,8 @@ export default function RootLayout({
               <main>{children}</main>
               <Footer />
               <Toaster position="top-right" />
+              <Analytics />
+              <SpeedInsights />
             </QuoteProvider>
           </AuthProvider>
         </ThemeProvider>
