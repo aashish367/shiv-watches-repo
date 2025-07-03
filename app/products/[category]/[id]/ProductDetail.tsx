@@ -25,7 +25,16 @@ import { useQuoteItems } from "@/hooks/useQuoteItems";
 import ProductReviews from "@/components/products/ProductReviews";
 import { supabase, type Product } from "@/lib/supabase";
 
-const ProductDetail: React.FC = () => {
+// Add this interface for your props
+interface ProductDetailProps {
+  initialProduct?: Product;
+  initialSimilarProducts?: Product[];
+}
+
+const ProductDetail: React.FC<ProductDetailProps> = ({ 
+  initialProduct = null, 
+  initialSimilarProducts = [] 
+}) => {
   const params = useParams();
   const id = params.id as string;
   const category = params.category as string;
@@ -34,16 +43,14 @@ const ProductDetail: React.FC = () => {
   const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
   const { addToQuote } = useQuoteItems();
   const [refreshReviews, setRefreshReviews] = useState(false);
-  const [product, setProduct] = useState<Product | null>(null);
-  const [similarProducts, setSimilarProducts] = useState<Product[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [product, setProduct] = useState<Product | null>(initialProduct);
+  const [similarProducts, setSimilarProducts] = useState<Product[]>(initialSimilarProducts);
+  const [loading, setLoading] = useState(!initialProduct);
   const [selectedImage, setSelectedImage] = useState(0);
-  const [quantity, setQuantity] = useState(50);
+  const [quantity, setQuantity] = useState(initialProduct?.moq || 50);
   const [showAddedToQuote, setShowAddedToQuote] = useState(false);
   const [showAuthModal, setShowAuthModal] = useState(false);
-  const [authModalMode, setAuthModalMode] = useState<"login" | "signup">(
-    "login"
-  );
+  const [authModalMode, setAuthModalMode] = useState<"login" | "signup">("login");
   const [wishlistLoading, setWishlistLoading] = useState(false);
   const [quoteLoading, setQuoteLoading] = useState(false);
 
@@ -53,10 +60,10 @@ const ProductDetail: React.FC = () => {
   }, [id]);
 
   useEffect(() => {
-    if (id) {
+    if (id && !initialProduct) {
       fetchProduct();
     }
-  }, [id]);
+  }, [id, initialProduct]);
 
   useEffect(() => {
     if (!showAuthModal && refreshReviews) {
@@ -66,6 +73,7 @@ const ProductDetail: React.FC = () => {
 
   const fetchProduct = async () => {
     try {
+      setLoading(true);
       const { data, error } = await supabase
         .from("products")
         .select("*")
@@ -78,10 +86,7 @@ const ProductDetail: React.FC = () => {
       setQuantity(data.moq);
 
       // Update document title
-      document.title = `${data.name} - Wholesale ${data.category.replace(
-        "-",
-        " "
-      )} | Shiv Watches`;
+      document.title = `${data.name} - Wholesale ${data.category.replace("-", " ")} | Shiv Watches`;
 
       // Fetch similar products
       const { data: similarData } = await supabase
@@ -94,6 +99,7 @@ const ProductDetail: React.FC = () => {
       setSimilarProducts(similarData || []);
     } catch (error) {
       console.error("Error fetching product:", error);
+      router.push('/404'); // Redirect to 404 if product not found
     } finally {
       setLoading(false);
     }
@@ -184,52 +190,48 @@ const ProductDetail: React.FC = () => {
 
   if (loading) {
     return (
-      <>
-        <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pt-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
-              <div className="animate-pulse">
-                <div className="bg-gray-200 dark:bg-gray-700 rounded-lg h-96 mb-4"></div>
-                <div className="grid grid-cols-4 gap-2">
-                  {[...Array(4)].map((_, i) => (
-                    <div
-                      key={i}
-                      className="bg-gray-200 dark:bg-gray-700 rounded-lg h-20"
-                    ></div>
-                  ))}
-                </div>
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+            <div className="animate-pulse">
+              <div className="bg-gray-200 dark:bg-gray-700 rounded-lg h-96 mb-4"></div>
+              <div className="grid grid-cols-4 gap-2">
+                {[...Array(4)].map((_, i) => (
+                  <div
+                    key={i}
+                    className="bg-gray-200 dark:bg-gray-700 rounded-lg h-20"
+                  ></div>
+                ))}
               </div>
-              <div className="animate-pulse">
-                <div className="bg-gray-200 dark:bg-gray-700 rounded-lg p-8">
-                  <div className="h-8 bg-gray-300 dark:bg-gray-600 rounded mb-4"></div>
-                  <div className="h-4 bg-gray-300 dark:bg-gray-600 rounded mb-6"></div>
-                  <div className="h-32 bg-gray-300 dark:bg-gray-600 rounded"></div>
-                </div>
+            </div>
+            <div className="animate-pulse">
+              <div className="bg-gray-200 dark:bg-gray-700 rounded-lg p-8">
+                <div className="h-8 bg-gray-300 dark:bg-gray-600 rounded mb-4"></div>
+                <div className="h-4 bg-gray-300 dark:bg-gray-600 rounded mb-6"></div>
+                <div className="h-32 bg-gray-300 dark:bg-gray-600 rounded"></div>
               </div>
             </div>
           </div>
         </div>
-      </>
+      </div>
     );
   }
 
   if (!product) {
     return (
-      <>
-        <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pt-20 flex items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              Product not found
-            </h1>
-            <Link
-              href="/products"
-              className="text-amber-600 hover:text-amber-700"
-            >
-              Back to Products
-            </Link>
-          </div>
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pt-20 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+            Product not found
+          </h1>
+          <Link
+            href="/products"
+            className="text-amber-600 hover:text-amber-700"
+          >
+            Back to Products
+          </Link>
         </div>
-      </>
+      </div>
     );
   }
 
@@ -272,10 +274,7 @@ const ProductDetail: React.FC = () => {
       setQuantity(newQuantity);
     }
   };
-interface ProductDetailProps {
-  product: Product;
-  category: string;
-}
+
   const handleWhatsAppInquiry = () => {
     const pricing = getCurrentPricing();
     const message = `Hi! I'm interested in wholesale inquiry for:
@@ -292,9 +291,7 @@ Please provide more details about:
 - Bulk customization options
 
 Thank you!`;
-    const whatsappUrl = `https://wa.me/919821964539?text=${encodeURIComponent(
-      message
-    )}`;
+    const whatsappUrl = `https://wa.me/919821964539?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };
 
@@ -317,15 +314,11 @@ Thank you!`;
 
   const handleSimilarProductInquiry = (similarProduct: Product) => {
     const message = `Hi! I'm interested in wholesale inquiry for ${similarProduct.name}. MOQ: ${similarProduct.moq} pieces. Please share more details.`;
-    const whatsappUrl = `https://wa.me/919821964539?text=${encodeURIComponent(
-      message
-    )}`;
+    const whatsappUrl = `https://wa.me/919821964539?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };
 
   const isProductInWishlist = product ? isInWishlist(product.id) : false;
-
-  // Combine cover_img with other images
   const allImages = [product.cover_img, ...product.images];
 
   return (
