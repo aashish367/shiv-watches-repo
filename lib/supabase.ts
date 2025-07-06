@@ -45,3 +45,19 @@ export const getCategories = async (): Promise<string[]> => {
     return [];
   }
 };
+// lib/supabase.ts
+export async function getCategoryDetails(categorySlug: string) {
+  // Query your Supabase database for category details
+  const { data, error } = await supabase
+    .from('categories')
+    .select('meta_title, meta_description, meta_keywords, og_image')
+    .eq('slug', categorySlug)
+    .single();
+
+  if (error) {
+    console.error('Error fetching category details:', error);
+    return null;
+  }
+
+  return data;
+}
