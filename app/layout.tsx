@@ -18,6 +18,30 @@ export const metadata: Metadata = {
   icons: {
     icon: "/images/fevicon.png",
   },
+    keywords: [
+   "wholesale watches",
+ "watch accessories wholesale",
+  "wall clocks wholesale",
+   "wrist watches supplier",
+    "table clocks wholesale",
+     "Ajanta wall clocks",
+      "ORPAT table clocks",
+       "Seizaiken button batteries",
+        "Bluetooth speakers wholesale",
+         "home appliances wholesale", 
+         "luxury watches India", 
+         "silent wall clocks",
+          "leather watch straps combo",
+           "watch batteries in bulk", 
+           "digital alarm clocks",
+            "analog wrist watches",
+             "clock repair Delhi",
+              "clock repair pickup service", 
+              "wholesale watches Delhi", 
+              "wholesale clocks India",
+               "Shiv Watches", 
+               "trusted watch supplier India"
+  ],
 };
 
 export default function RootLayout({
