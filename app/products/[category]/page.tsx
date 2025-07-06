@@ -2,25 +2,16 @@
 import ProductListing from '../page';
 import { getCategories } from '@/lib/supabase';
 
-interface PageProps {
-  params: {
-    category: string;
-  };
-  searchParams?: {
-    [key: string]: string | string[] | undefined;
-  };
-}
+export const revalidate = 3600; // Revalidate every hour (in seconds)
 
-// For static generation of known categories
 export async function generateStaticParams() {
   const categories = await getCategories();
   
   return categories.map((category) => ({
-    category: category.toString()
+    category: category
   }));
 }
 
-// The actual page component
-export default function CategoryPage({ params }: PageProps) {
+export default function CategoryPage() {
   return <ProductListing />;
 }

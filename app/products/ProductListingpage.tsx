@@ -1,12 +1,6 @@
 "use client";
 
-import React, {
-  useState,
-  useMemo,
-  useEffect,
-  useRef,
-  useCallback,
-} from "react";
+import React, { useState, useMemo, useEffect, useRef, useCallback } from "react";
 import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { Search, Filter, Grid, List } from "lucide-react";
@@ -59,14 +53,6 @@ const ProductListing = () => {
       const { data, error } = await query;
 
       if (error) throw error;
-
-      // Handle case where category doesn't exist
-      if (category && (!data || data.length === 0)) {
-        setAllProducts([]);
-        setVisibleProducts([]);
-        return;
-      }
-
       setAllProducts(data || []);
       setVisibleProducts((data || []).slice(0, productsPerPage));
       setPage(1);
@@ -358,9 +344,9 @@ const ProductListing = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.05 }}
                           >
-                            <ProductCard
-                              product={product}
-                              viewMode={viewMode}
+                            <ProductCard 
+                              product={product} 
+                              viewMode={viewMode} 
                               href={`/products/${product.category}/${product.id}`}
                             />
                           </motion.div>
@@ -416,24 +402,18 @@ const LoadingState = () => (
   </div>
 );
 
-const EmptyProductsState = () => {
-  const params = useParams();
-  const category = params?.category as string | undefined;
-
-  // Default empty state
-  return (
-    <div className="text-center py-12">
-      <div className="text-gray-400 mb-4">
-        <Search className="h-12 w-12 md:h-16 md:w-16 mx-auto" />
-      </div>
-      <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white mb-2">
-        No products found
-      </h3>
-      <p className="text-gray-600 dark:text-gray-400">
-        Try adjusting your search or filters
-      </p>
+const EmptyProductsState = () => (
+  <div className="text-center py-12">
+    <div className="text-gray-400 mb-4">
+      <Search className="h-12 w-12 md:h-16 md:w-16 mx-auto" />
     </div>
-  );
-};
+    <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white mb-2">
+      No products found
+    </h3>
+    <p className="text-gray-600 dark:text-gray-400">
+      Try adjusting your search or filters
+    </p>
+  </div>
+);
 
 export default ProductListing;
