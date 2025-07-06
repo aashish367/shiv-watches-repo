@@ -1,20 +1,18 @@
 import ProductListing from '../page';
 import { getCategories } from '@/lib/supabase';
 
-// Opt out of static generation for this route
-export const dynamic = 'force-dynamic';
-
-// Optional: Keep generateStaticParams for initial categories
 export async function generateStaticParams() {
   const categories = await getCategories();
+  
+  if (!categories) {
+    return [];
+  }
+
   return categories.map((category) => ({
-    category: category
+    category: category.toString()
   }));
 }
 
-// This ensures new categories won't 404
-export const dynamicParams = true;
-
-export default function CategoryPage() {
+export default function CategoryPage({ params }: { params: { category: string } }) {
   return <ProductListing />;
 }
