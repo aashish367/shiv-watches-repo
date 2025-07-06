@@ -20,10 +20,6 @@ export async function generateStaticParams() {
   }));
 }
 
-// Dynamic parameters configuration
-export const dynamicParams = true; // Allow new categories not generated at build time
-export const dynamic = 'auto'; // Let Next.js decide when to use static/dynamic
-
 // The actual page component
 export default function CategoryPage({ params }: PageProps) {
   return <ProductListing />;
