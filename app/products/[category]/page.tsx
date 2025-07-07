@@ -2,9 +2,14 @@ import { Metadata } from 'next';
 import ProductListing from '../page';
 import { getCategories, getCategoryDetails } from '@/lib/supabase';
 
-export const dynamicParams = true;
 export const revalidate = 3600;
 export const dynamic = 'force-dynamic';
+
+interface PageProps {
+  params: {
+    category: string;
+  };
+}
 
 export async function generateStaticParams() {
   const categories = await getCategories();
@@ -13,9 +18,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata(
-  { params }: { params: { category: string } }
-): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const categoryDetails = await getCategoryDetails(params.category);
 
   const title = categoryDetails?.meta_title || `${params.category.replace(/-/g, ' ')} | Wholesale Products – Shiv Watches`;
@@ -50,6 +53,6 @@ export async function generateMetadata(
   };
 }
 
-export default function CategoryPage() {
+export default function CategoryPage({ params }: PageProps) {
   return <ProductListing />;
 }
