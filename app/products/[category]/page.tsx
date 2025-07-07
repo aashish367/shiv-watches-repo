@@ -5,24 +5,22 @@ import { getCategories, getCategoryDetails } from '@/lib/supabase';
 export const revalidate = 3600;
 export const dynamic = 'force-dynamic';
 
-interface CategoryPageParams {
+interface Params {
   category: string;
 }
 
-interface CategoryPageProps {
-  params: CategoryPageParams;
-}
-
-export async function generateStaticParams(): Promise<CategoryPageParams[]> {
+export async function generateStaticParams(): Promise<Params[]> {
   const categories = await getCategories();
   return categories.map((category: string) => ({
     category,
   }));
 }
 
-export async function generateMetadata(
-  { params }: { params: CategoryPageParams }
-): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Params;
+}): Promise<Metadata> {
   const categoryDetails = await getCategoryDetails(params.category);
 
   const title = categoryDetails?.meta_title || `${params.category.replace(/-/g, ' ')} | Wholesale Products – Shiv Watches`;
@@ -57,6 +55,6 @@ export async function generateMetadata(
   };
 }
 
-export default function CategoryPage({ params }: CategoryPageProps) {
+export default function CategoryPage({ params }: { params: Params }) {
   return <ProductListing />;
 }
