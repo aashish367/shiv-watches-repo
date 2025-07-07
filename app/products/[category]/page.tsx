@@ -2,20 +2,20 @@ import { Metadata } from 'next';
 import ProductListing from '../page';
 import { getCategories, getCategoryDetails } from '@/lib/supabase';
 
+export const dynamicParams = true;
 export const revalidate = 3600;
+export const dynamic = 'force-dynamic';
 
 export async function generateStaticParams() {
   const categories = await getCategories();
-
   return categories.map((category: string) => ({
     category,
   }));
 }
 
 export async function generateMetadata(
-  props: { params: { category: string } }
+  { params }: { params: { category: string } }
 ): Promise<Metadata> {
-  const { params } = props;
   const categoryDetails = await getCategoryDetails(params.category);
 
   const title = categoryDetails?.meta_title || `${params.category.replace(/-/g, ' ')} | Wholesale Products – Shiv Watches`;

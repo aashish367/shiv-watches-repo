@@ -41,38 +41,54 @@ const ProductListing = () => {
     fetchProducts();
   }, [category]);
 
-  const fetchProducts = async () => {
-    try {
-      setLoading(true);
-      let query = supabase.from("products").select("*");
+const fetchProducts = async () => {
+  try {
+    setLoading(true);
+    let query = supabase.from("products").select("*");
 
-      if (category) {
-        query = query.eq("category", category);
-      }
-
-      const { data, error } = await query;
-
-      if (error) throw error;
-      setAllProducts(data || []);
-      setVisibleProducts((data || []).slice(0, productsPerPage));
-      setPage(1);
-      setHasMore((data?.length || 0) > productsPerPage);
-
-      if (data && data.length > 0) {
-        const maxPrice = Math.max(...data.map((p) => p.price));
-        const maxMoq = Math.max(...data.map((p) => p.moq));
-        setFilters((prev) => ({
-          ...prev,
-          priceRange: [0, maxPrice],
-          moqRange: [0, maxMoq],
-        }));
-      }
-    } catch (error) {
-      console.error("Error fetching products:", error);
-    } finally {
-      setLoading(false);
+    if (category) {
+      query = query.eq("category", category);
     }
-  };
+
+    // Add cache-busting
+    const timestamp = Date.now();
+    const { data, error } = await query
+      .order('created_at', { ascending: false })
+      .neq('status', 'draft');
+
+    if (error) throw error;
+    
+    // Force fresh data
+    const freshProducts = data || [];
+    setAllProducts(freshProducts);
+    setVisibleProducts(freshProducts.slice(0, productsPerPage));
+    setPage(1);
+    setHasMore(freshProducts.length > productsPerPage);
+
+    if (freshProducts.length > 0) {
+      const maxPrice = Math.max(...freshProducts.map((p) => p.price));
+      const maxMoq = Math.max(...freshProducts.map((p) => p.moq));
+      setFilters((prev) => ({
+        ...prev,
+        priceRange: [0, maxPrice],
+        moqRange: [0, maxMoq],
+      }));
+    }
+  } catch (error) {
+    console.error("Error fetching products:", error);
+  } finally {
+    setLoading(false);
+  }
+};
+
+// Add this useEffect to handle category changes
+useEffect(() => {
+  const timer = setTimeout(() => {
+    fetchProducts();
+  }, 100); // Small delay to ensure params are loaded
+
+  return () => clearTimeout(timer);
+}, [category]);
 
   const filteredProducts = useMemo(() => {
     let result = [...allProducts];

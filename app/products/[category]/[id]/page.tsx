@@ -3,6 +3,10 @@ import ProductDetail from "./ProductDetail";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+export const dynamicParams = true; // Enable dynamic params for new products
+export const revalidate = 3600; // Revalidate data every hour
+export const dynamic = 'force-dynamic'; // Ensure dynamic server-side rendering
+
 // Generate static paths at build time
 export async function generateStaticParams() {
   const { data: products, error } = await supabase
@@ -20,6 +24,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: any): Promise<Metadata> {
+  // Fetch fresh data for metadata
   const { data: product, error } = await supabase
     .from("products")
     .select("*")
@@ -30,6 +35,10 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
     return {
       title: "Product Not Found | Shiv Watches",
       description: "Product not found. Browse our wholesale collection.",
+      robots: {
+        index: false,
+        follow: false,
+      }
     };
   }
 
@@ -37,13 +46,13 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
 
   return {
     title: `${product.name} | Wholesale ${categoryName} – Shiv Watches`,
-    description: product.description,
+    description: product.description || `Wholesale ${product.name} at best prices. MOQ: ${product.moq} pieces.`,
     alternates: {
       canonical: `https://www.shivwatches.com/products/${product.category}/${product.id}`,
     },
     openGraph: {
       title: `${product.name} | Shiv Watches`,
-      description: product.description,
+      description: product.description || `Wholesale ${product.name} at best prices`,
       images: product.cover_img
         ? [
             {
@@ -65,10 +74,8 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
   };
 }
 
-export const revalidate = 3600; // Revalidate data every hour
-
 export default async function Page({ params }: any) {
-  // Fetch the product
+  // Fetch fresh data for the page
   const { data: product, error } = await supabase
     .from("products")
     .select("*")
@@ -76,7 +83,7 @@ export default async function Page({ params }: any) {
     .single();
 
   if (error || !product) {
-    notFound(); // This will show the 404 page
+    notFound();
   }
 
   // Fetch similar products
