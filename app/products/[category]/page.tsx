@@ -13,9 +13,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata(
-  props: { params: { category: string } }
+  { params }: { params: { category: string } }
 ): Promise<Metadata> {
-  const { params } = props;
   const categoryDetails = await getCategoryDetails(params.category);
 
   const title = categoryDetails?.meta_title || `${params.category.replace(/-/g, ' ')} | Wholesale Products – Shiv Watches`;
