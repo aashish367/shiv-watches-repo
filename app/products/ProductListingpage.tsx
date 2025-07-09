@@ -41,54 +41,48 @@ const ProductListing = () => {
     fetchProducts();
   }, [category]);
 
-const fetchProducts = async () => {
-  try {
-    setLoading(true);
-    let query = supabase.from("products").select("*");
+  const fetchProducts = async () => {
+    try {
+      setLoading(true);
+      let query = supabase.from("products").select("*");
 
-    if (category) {
-      query = query.eq("category", category);
+      if (category) {
+        query = query.eq("category", category);
+      }
+
+      const { data, error } = await query.order('created_at', { ascending: false });
+
+      if (error) {
+        console.error('Error fetching products:', error);
+        setAllProducts([]);
+        setVisibleProducts([]);
+        setLoading(false);
+        return;
+      }
+
+      const products = data || [];
+      setAllProducts(products);
+      setVisibleProducts(products.slice(0, productsPerPage));
+      setPage(1);
+      setHasMore(products.length > productsPerPage);
+
+      if (products.length > 0) {
+        const maxPrice = Math.max(...products.map((p) => p.price));
+        const maxMoq = Math.max(...products.map((p) => p.moq));
+        setFilters((prev) => ({
+          ...prev,
+          priceRange: [0, maxPrice],
+          moqRange: [0, maxMoq],
+        }));
+      }
+    } catch (error) {
+      console.error("Error fetching products:", error);
+      setAllProducts([]);
+      setVisibleProducts([]);
+    } finally {
+      setLoading(false);
     }
-
-    // Add cache-busting
-    const timestamp = Date.now();
-    const { data, error } = await query
-      .order('created_at', { ascending: false })
-      .neq('status', 'draft');
-
-    if (error) throw error;
-    
-    // Force fresh data
-    const freshProducts = data || [];
-    setAllProducts(freshProducts);
-    setVisibleProducts(freshProducts.slice(0, productsPerPage));
-    setPage(1);
-    setHasMore(freshProducts.length > productsPerPage);
-
-    if (freshProducts.length > 0) {
-      const maxPrice = Math.max(...freshProducts.map((p) => p.price));
-      const maxMoq = Math.max(...freshProducts.map((p) => p.moq));
-      setFilters((prev) => ({
-        ...prev,
-        priceRange: [0, maxPrice],
-        moqRange: [0, maxMoq],
-      }));
-    }
-  } catch (error) {
-    console.error("Error fetching products:", error);
-  } finally {
-    setLoading(false);
-  }
-};
-
-// Add this useEffect to handle category changes
-useEffect(() => {
-  const timer = setTimeout(() => {
-    fetchProducts();
-  }, 100); // Small delay to ensure params are loaded
-
-  return () => clearTimeout(timer);
-}, [category]);
+  };
 
   const filteredProducts = useMemo(() => {
     let result = [...allProducts];
@@ -138,6 +132,8 @@ useEffect(() => {
         return result.sort((a, b) => b.rating - a.rating);
       case "moq":
         return result.sort((a, b) => a.moq - b.moq);
+      case "newest":
+        return result.sort((a, b) => new Date(b.created_at || '').getTime() - new Date(a.created_at || '').getTime());
       default:
         return result.sort((a, b) => b.reviews - a.reviews);
     }
@@ -211,42 +207,6 @@ useEffect(() => {
     );
   };
 
-  const getSEOTitle = () => {
-    if (!category) return "Wholesale Products | Shiv Watches";
-
-    const categoryNames: Record<string, string> = {
-      speakers: "Bluetooth Speakers",
-      "wrist-watches": "Wrist Watches",
-      "wall-clocks": "Wall Clocks",
-      "table-clocks": "Table Clocks",
-      "home-appliances": "Home Appliances",
-      accessories: "Watch Accessories",
-    };
-
-    return `Wholesale ${
-      categoryNames[category] || category.replace("-", " ")
-    } | Shiv Watches`;
-  };
-
-  const getSEODescription = () => {
-    if (!category)
-      return "Explore our wide range of wholesale products at competitive prices.";
-
-    const descriptions: Record<string, string> = {
-      speakers: "Premium collection of wholesale Bluetooth speakers.",
-      "wrist-watches": "High-quality wholesale wrist watches collection.",
-      "wall-clocks": "Stylish wall clocks for every decor.",
-      "table-clocks": "Elegant table clocks for home and office.",
-      "home-appliances": "Quality home appliances for modern living.",
-      accessories: "Complete range of watch accessories.",
-    };
-
-    return (
-      descriptions[category] ||
-      `Browse our ${category.replace("-", " ")} collection.`
-    );
-  };
-
   if (loading)
     return (
       <ThemeProvider>
@@ -293,6 +253,7 @@ useEffect(() => {
                       className="px-3 md:px-4 py-2 md:py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 text-sm md:text-base"
                     >
                       <option value="popularity">Most Popular</option>
+                      <option value="newest">Newest First</option>
                       <option value="price-low">Price: Low to High</option>
                       <option value="price-high">Price: High to Low</option>
                       <option value="rating">Highest Rated</option>
@@ -427,7 +388,7 @@ const EmptyProductsState = () => (
       No products found
     </h3>
     <p className="text-gray-600 dark:text-gray-400">
-      Try adjusting your search or filters
+      Try adjusting your search or filters, or check back later for new products
     </p>
   </div>
 );

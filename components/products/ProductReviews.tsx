@@ -45,26 +45,46 @@ const ProductReviews = ({
     const fetchReviews = async () => {
       setLoading(true);
       try {
-        const { data, error } = await supabase
+        // First, fetch reviews
+        const { data: reviewsData, error: reviewsError } = await supabase
           .from('reviews')
-          .select(`
-            id,
-            rating,
-            comment,
-            created_at,
-            user_id,
-            profiles:user_id (username, avatar_url)
-          `)
+          .select('id, rating, comment, created_at, user_id')
           .eq('product_id', productId)
           .order('created_at', { ascending: false });
 
-        if (error) throw error;
+        if (reviewsError) throw reviewsError;
         
-        // Transform the data to match the Review interface
-        const transformedData = data?.map(review => ({
+        if (!reviewsData || reviewsData.length === 0) {
+          setReviews([]);
+          return;
+        }
+
+        // Get unique user IDs
+        const userIds = [...new Set(reviewsData.map(review => review.user_id))];
+        
+        // Fetch user profiles separately
+        const { data: profilesData, error: profilesError } = await supabase
+          .from('profiles')
+          .select('id, username, avatar_url')
+          .in('id', userIds);
+
+        if (profilesError) {
+          console.warn('Could not fetch user profiles:', profilesError);
+        }
+
+        // Create a map of user profiles for easy lookup
+        const profilesMap = new Map();
+        if (profilesData) {
+          profilesData.forEach(profile => {
+            profilesMap.set(profile.id, profile);
+          });
+        }
+        
+        // Combine reviews with profile data
+        const transformedData = reviewsData.map(review => ({
           ...review,
-          profiles: review.profiles ? (Array.isArray(review.profiles) ? review.profiles[0] : review.profiles) : undefined
-        })) || [];
+          profiles: profilesMap.get(review.user_id) || undefined
+        }));
         
         setReviews(transformedData);
       } catch (error) {

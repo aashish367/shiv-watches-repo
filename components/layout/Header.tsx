@@ -7,7 +7,7 @@ import { Search, Menu, X, Sun, Moon, ShoppingBag } from 'lucide-react';
 import { useTheme } from '../../contexts/ThemeContext';
 import { useQuote } from '../../contexts/QuoteContext';
 import { motion, AnimatePresence } from 'framer-motion';
-import { supabase, type Product } from '../../lib/supabase';
+import { supabase, type Product, normalizeCoverImage } from '../../lib/supabase';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -189,38 +189,41 @@ const Header: React.FC = () => {
                     </div>
                   ) : filteredResults.length > 0 ? (
                     <div className="divide-y divide-gray-200 dark:divide-gray-700">
-                      {filteredResults.map((product) => (
-                        <Link
-                          key={product.id}
-                          href={`/products/${product.category}/${product.id}`}
-                          className="block p-4 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
-                          onClick={() => {
-                            setIsSearchOpen(false);
-                            setSearchTerm('');
-                          }}
-                        >
-                          <div className="flex items-center space-x-4">
-                            {product.images && (
-                              <img
-                                src={product.cover_img}
-                                alt={product.name}
-                                className="h-12 w-12 object-contain rounded-xl"
-                              />
-                            )}
-                            <div>
-                              <h3 className="font-medium text-gray-900 dark:text-white">
-                                {product.name}
-                              </h3>
-                              <p className="text-sm text-gray-500 dark:text-gray-400">
-                                {product.category}
-                              </p>
-                              <p className="text-amber-600 dark:text-amber-400 font-medium">
-                                ₹{product.price.toFixed(2)}
-                              </p>
+                      {filteredResults.map((product) => {
+                        const coverImage = normalizeCoverImage(product.cover_img);
+                        return (
+                          <Link
+                            key={product.id}
+                            href={`/products/${product.category}/${product.id}`}
+                            className="block p-4 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                            onClick={() => {
+                              setIsSearchOpen(false);
+                              setSearchTerm('');
+                            }}
+                          >
+                            <div className="flex items-center space-x-4">
+                              {coverImage && (
+                                <img
+                                  src={coverImage}
+                                  alt={product.name}
+                                  className="h-12 w-12 object-contain rounded-xl"
+                                />
+                              )}
+                              <div>
+                                <h3 className="font-medium text-gray-900 dark:text-white">
+                                  {product.name}
+                                </h3>
+                                <p className="text-sm text-gray-500 dark:text-gray-400">
+                                  {product.category}
+                                </p>
+                                <p className="text-amber-600 dark:text-amber-400 font-medium">
+                                  ₹{product.price.toFixed(2)}
+                                </p>
+                              </div>
                             </div>
-                          </div>
-                        </Link>
-                      ))}
+                          </Link>
+                        );
+                      })}
                     </div>
                   ) : (
                     <div className="p-4 text-center text-gray-500 dark:text-gray-400">

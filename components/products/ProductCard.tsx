@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Star, MessageCircle, Eye, Package } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { normalizeCoverImage } from '@/lib/supabase';
 
 interface Product {
   id: string;
@@ -17,7 +18,7 @@ interface Product {
   tags: string[];
   inStock: boolean;
   description?: string;
-  cover_img: string;
+  cover_img: string | string[];
 }
 
 interface ProductCardProps {
@@ -44,6 +45,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, viewMode }) => {
     }
   };
 
+  const coverImage = normalizeCoverImage(product.cover_img);
+
   if (viewMode === 'list') {
     return (
       <motion.div
@@ -53,7 +56,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, viewMode }) => {
         <Link href={`/products/${product.category}/${product.id}`} className="flex flex-col sm:flex-row">
           <div className="relative w-full sm:w-48 h-48">
             <img
-              src={product.cover_img}
+              src={coverImage}
               alt={product.name}
               className="w-full h-full object-cover"
               loading="lazy"
@@ -120,7 +123,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, viewMode }) => {
       <Link href={`/products/${product.category}/${product.id}`}>
         <div className="relative">
           <img
-            src={product.cover_img}
+            src={coverImage}
             alt={product.name}
             className="w-full h-48 md:h-64 object-cover group-hover:scale-105 transition-transform duration-300"
           />
