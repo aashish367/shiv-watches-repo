@@ -195,23 +195,6 @@
       "permanent": true
     },
     {
-      "source": "/products",
-      "destination": "/products/wall-clocks",
-      "has": [
-        {
-          "type": "query",
-          "key": "category",
-          "value": "Wall clock"
-        },
-        {
-          "type": "query",
-          "key": "page",
-          "value": "7"
-        }
-      ],
-      "permanent": true
-    },
-    {
       "source": "/product-detail",
       "destination": "/products/accessories/49f1797f-c137-4963-8799-7ccd1b88a2ee",
       "has": [
@@ -380,23 +363,6 @@
       "permanent": true
     },
     {
-      "source": "/products",
-      "destination": "/products/accessories",
-      "has": [
-        {
-          "type": "query",
-          "key": "category",
-          "value": "Button Battery"
-        },
-        {
-          "type": "query",
-          "key": "page",
-          "value": "2"
-        }
-      ],
-      "permanent": true
-    },
-    {
       "source": "/product-detail",
       "destination": "/products",
       "has": [
@@ -505,23 +471,6 @@
       "permanent": true
     },
     {
-      "source": "/products",
-      "destination": "/products/accessories",
-      "has": [
-        {
-          "type": "query",
-          "key": "category",
-          "value": "Watch straps"
-        },
-        {
-          "type": "query",
-          "key": "page",
-          "value": "1"
-        }
-      ],
-      "permanent": true
-    },
-    {
       "source": "/product-detail",
       "destination": "/products/wall-clocks",
       "has": [
@@ -553,18 +502,6 @@
           "type": "query",
           "key": "id",
           "value": "85"
-        }
-      ],
-      "permanent": true
-    },
-    {
-      "source": "/products",
-      "destination": "/products/accessories",
-      "has": [
-        {
-          "type": "query",
-          "key": "category",
-          "value": "Button battery"
         }
       ],
       "permanent": true
@@ -661,23 +598,6 @@
           "type": "query",
           "key": "id",
           "value": "66"
-        }
-      ],
-      "permanent": true
-    },
-    {
-      "source": "/products",
-      "destination": "/products/wall-clocks",
-      "has": [
-        {
-          "type": "query",
-          "key": "category",
-          "value": "Wall clock"
-        },
-        {
-          "type": "query",
-          "key": "page",
-          "value": "6"
         }
       ],
       "permanent": true
@@ -1031,23 +951,6 @@
       "permanent": true
     },
     {
-      "source": "/products",
-      "destination": "/products/wall-clocks",
-      "has": [
-        {
-          "type": "query",
-          "key": "category",
-          "value": "Wall clock"
-        },
-        {
-          "type": "query",
-          "key": "page",
-          "value": "5"
-        }
-      ],
-      "permanent": true
-    },
-    {
       "source": "/product-detail",
       "destination": "/products/wall-clocks/401eb06c-2667-489e-ba37-57417a603983",
       "has": [
@@ -1084,18 +987,6 @@
       "permanent": true
     },
     {
-      "source": "/products",
-      "destination": "/products/wrist-watches",
-      "has": [
-        {
-          "type": "query",
-          "key": "category",
-          "value": "Watches"
-        }
-      ],
-      "permanent": true
-    },
-    {
       "source": "/product-detail",
       "destination": "/products/table-clocks/6ceb084b-3e4e-42df-802d-405905509427",
       "has": [
@@ -1120,23 +1011,6 @@
       "permanent": true
     },
     {
-      "source": "/products",
-      "destination": "/products/wall-clocks",
-      "has": [
-        {
-          "type": "query",
-          "key": "category",
-          "value": "Wall clock"
-        },
-        {
-          "type": "query",
-          "key": "page",
-          "value": "4"
-        }
-      ],
-      "permanent": true
-    },
-    {
       "source": "/product-detail",
       "destination": "/products/wall-clocks/231bbfc7-8a29-42e9-b44c-56ccd2d5ea08",
       "has": [
@@ -1144,23 +1018,6 @@
           "type": "query",
           "key": "id",
           "value": "36"
-        }
-      ],
-      "permanent": true
-    },
-    {
-      "source": "/products",
-      "destination": "/products/table-clocks",
-      "has": [
-        {
-          "type": "query",
-          "key": "category",
-          "value": "Desk clock"
-        },
-        {
-          "type": "query",
-          "key": "page",
-          "value": "2"
         }
       ],
       "permanent": true
@@ -1293,23 +1150,6 @@
           "type": "query",
           "key": "id",
           "value": "222"
-        }
-      ],
-      "permanent": true
-    },
-    {
-      "source": "/products",
-      "destination": "/products/wall-clocks",
-      "has": [
-        {
-          "type": "query",
-          "key": "category",
-          "value": "Wall clock"
-        },
-        {
-          "type": "query",
-          "key": "page",
-          "value": "1"
         }
       ],
       "permanent": true
@@ -1579,18 +1419,6 @@
       "permanent": true
     },
     {
-      "source": "/products",
-      "destination": "/products/accessories",
-      "has": [
-        {
-          "type": "query",
-          "key": "category",
-          "value": "Clock Movements"
-        }
-      ],
-      "permanent": true
-    },
-    {
       "source": "/product-detail",
       "destination": "/products/wall-clocks/6bd33a53-e113-4ca4-9ff6-8f1f071edf90",
       "has": [
@@ -1694,18 +1522,6 @@
           "type": "query",
           "key": "id",
           "value": "168"
-        }
-      ],
-      "permanent": true
-    },
-    {
-      "source": "/products",
-      "destination": "/products/accessories",
-      "has": [
-        {
-          "type": "query",
-          "key": "category",
-          "value": "Alkaline battery"
         }
       ],
       "permanent": true
@@ -1891,23 +1707,6 @@
       "permanent": true
     },
     {
-      "source": "/products",
-      "destination": "/products/wrist-watches",
-      "has": [
-        {
-          "type": "query",
-          "key": "category",
-          "value": "Watches"
-        },
-        {
-          "type": "query",
-          "key": "page",
-          "value": "1"
-        }
-      ],
-      "permanent": true
-    },
-    {
       "source": "/product-detail",
       "destination": "/products/wall-clocks",
       "has": [
@@ -1975,23 +1774,6 @@
           "type": "query",
           "key": "id",
           "value": "25"
-        }
-      ],
-      "permanent": true
-    },
-    {
-      "source": "/products",
-      "destination": "/products/wall-clocks",
-      "has": [
-        {
-          "type": "query",
-          "key": "category",
-          "value": "Wall clock"
-        },
-        {
-          "type": "query",
-          "key": "page",
-          "value": "3"
         }
       ],
       "permanent": true
@@ -2201,18 +1983,6 @@
       "permanent": true
     },
     {
-      "source": "/products",
-      "destination": "/",
-      "has": [
-        {
-          "type": "query",
-          "key": "category",
-          "value": "Glasses"
-        }
-      ],
-      "permanent": true
-    },
-    {
       "source": "/product-detail",
       "destination": "/products/wall-clocks",
       "has": [
@@ -2328,23 +2098,6 @@
           "type": "query",
           "key": "id",
           "value": "176"
-        }
-      ],
-      "permanent": true
-    },
-    {
-      "source": "/products",
-      "destination": "/products",
-      "has": [
-        {
-          "type": "query",
-          "key": "category",
-          "value": "Audio Accessories"
-        },
-        {
-          "type": "query",
-          "key": "page",
-          "value": "2"
         }
       ],
       "permanent": true
@@ -2518,23 +2271,6 @@
       "permanent": true
     },
     {
-      "source": "/products",
-      "destination": "/products/wall-clocks",
-      "has": [
-        {
-          "type": "query",
-          "key": "category",
-          "value": "Wall clock"
-        },
-        {
-          "type": "query",
-          "key": "page",
-          "value": "2"
-        }
-      ],
-      "permanent": true
-    },
-    {
       "source": "/product-detail",
       "destination": "/products/wall-clocks",
       "has": [
@@ -2554,18 +2290,6 @@
           "type": "query",
           "key": "id",
           "value": "57"
-        }
-      ],
-      "permanent": true
-    },
-    {
-      "source": "/products",
-      "destination": "/products/table-clocks",
-      "has": [
-        {
-          "type": "query",
-          "key": "category",
-          "value": "Desk clock"
         }
       ],
       "permanent": true
@@ -2655,23 +2379,6 @@
       "permanent": true
     },
     {
-      "source": "/products",
-      "destination": "/products/wall-clocks",
-      "has": [
-        {
-          "type": "query",
-          "key": "category",
-          "value": "Wall clock"
-        },
-        {
-          "type": "query",
-          "key": "page",
-          "value": "8"
-        }
-      ],
-      "permanent": true
-    },
-    {
       "source": "/product-detail",
       "destination": "/products/wall-clocks",
       "has": [
@@ -2720,18 +2427,6 @@
       "permanent": true
     },
     {
-      "source": "/products",
-      "destination": "/products/home-appliances",
-      "has": [
-        {
-          "type": "query",
-          "key": "category",
-          "value": "heaters"
-        }
-      ],
-      "permanent": true
-    },
-    {
       "source": "/product-detail",
       "destination": "/products/wall-clocks/46eef105-59cb-42f2-9553-e971b21febe0",
       "has": [
@@ -2744,7 +2439,7 @@
       "permanent": true
     },
     {
-      "source": "/products",
+      "source": "/products.php",
       "destination": "/products",
       "has": [
         {
@@ -2785,23 +2480,6 @@
       "permanent": true
     },
     {
-      "source": "/products",
-      "destination": "/products/accessories",
-      "has": [
-        {
-          "type": "query",
-          "key": "category",
-          "value": "Alkaline battery"
-        },
-        {
-          "type": "query",
-          "key": "page",
-          "value": "1"
-        }
-      ],
-      "permanent": true
-    },
-    {
       "source": "/product-detail",
       "destination": "/products/wall-clocks",
       "has": [
@@ -2814,18 +2492,6 @@
       "permanent": true
     },
     {
-      "source": "/products",
-      "destination": "/products/wall-clocks",
-      "has": [
-        {
-          "type": "query",
-          "key": "category",
-          "value": "Wall clock"
-        }
-      ],
-      "permanent": true
-    },
-    {
       "source": "/product-detail",
       "destination": "/products/accessories/b6c3fe33-3e36-403f-994b-a2205b7f86ed",
       "has": [
@@ -2833,23 +2499,6 @@
           "type": "query",
           "key": "id",
           "value": "16"
-        }
-      ],
-      "permanent": true
-    },
-    {
-      "source": "/products",
-      "destination": "/products/wrist-watches",
-      "has": [
-        {
-          "type": "query",
-          "key": "category",
-          "value": "Watches"
-        },
-        {
-          "type": "query",
-          "key": "page",
-          "value": "2"
         }
       ],
       "permanent": true
@@ -2898,23 +2547,6 @@
           "type": "query",
           "key": "id",
           "value": "107"
-        }
-      ],
-      "permanent": true
-    },
-    {
-      "source": "/products",
-      "destination": "/products/home-appliances",
-      "has": [
-        {
-          "type": "query",
-          "key": "category",
-          "value": "Home appliances"
-        },
-        {
-          "type": "query",
-          "key": "page",
-          "value": "1"
         }
       ],
       "permanent": true
@@ -3088,35 +2720,6 @@
       "permanent": true
     },
     {
-      "source": "/products",
-      "destination": "/products/accessories",
-      "has": [
-        {
-          "type": "query",
-          "key": "category",
-          "value": "Watch straps"
-        }
-      ],
-      "permanent": true
-    },
-    {
-      "source": "/products",
-      "destination": "/products/accessories",
-      "has": [
-        {
-          "type": "query",
-          "key": "category",
-          "value": "Button battery"
-        },
-        {
-          "type": "query",
-          "key": "page",
-          "value": "2"
-        }
-      ],
-      "permanent": true
-    },
-    {
       "source": "/product-detail",
       "destination": "/products/wrist-watches",
       "has": [
@@ -3124,18 +2727,6 @@
           "type": "query",
           "key": "id",
           "value": "212"
-        }
-      ],
-      "permanent": true
-    },
-    {
-      "source": "/products",
-      "destination": "/products/table-clocks",
-      "has": [
-        {
-          "type": "query",
-          "key": "category",
-          "value": "table-clock"
         }
       ],
       "permanent": true
@@ -3158,30 +2749,6 @@
           "type": "query",
           "key": "id",
           "value": "59"
-        }
-      ],
-      "permanent": true
-    },
-    {
-      "source": "/products",
-      "destination": "/products/home-appliances",
-      "has": [
-        {
-          "type": "query",
-          "key": "category",
-          "value": "Home appliances"
-        }
-      ],
-      "permanent": true
-    },
-    {
-      "source": "/products",
-      "destination": "/",
-      "has": [
-        {
-          "type": "query",
-          "key": "category",
-          "value": "Water Purifier"
         }
       ],
       "permanent": true
@@ -3218,47 +2785,6 @@
           "type": "query",
           "key": "id",
           "value": "92"
-        }
-      ],
-      "permanent": true
-    },
-    {
-      "source": "/products",
-      "destination": "/products/accessories",
-      "has": [
-        {
-          "type": "query",
-          "key": "category",
-          "value": "Button battery"
-        }
-      ],
-      "permanent": true
-    },
-    {
-      "source": "/products",
-      "destination": "/products/wall-clocks",
-      "has": [
-        {
-          "type": "query",
-          "key": "category",
-          "value": "Wall clock"
-        }
-      ],
-      "permanent": true
-    },
-    {
-      "source": "/products",
-      "destination": "/products",
-      "permanent": true
-    },
-    {
-      "source": "/products",
-      "destination": "/",
-      "has": [
-        {
-          "type": "query",
-          "key": "category",
-          "value": "Water Purifier"
         }
       ],
       "permanent": true
