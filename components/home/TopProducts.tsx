@@ -3,188 +3,19 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Star, MessageCircle, ArrowRight } from 'lucide-react';
+import { Star, MessageCircle, ArrowRight, Eye } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { supabase, type Product } from '../../lib/supabase';
+import ProductCard from '../products/ProductCard';
 
-const ProductCard: React.FC<{ product: Product; index: number }> = ({ product, index }) => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-    rootMargin: '50px 0px',
-  });
-
-  const handleWhatsAppInquiry = (product: Product) => {
-    const message = `Hi! I'm interested in wholesale inquiry for ${product.name}. MOQ: ${product.moq} pieces. Please share more details.`;
-    const whatsappUrl = `https://wa.me/919821964539?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
-  };
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 50, scale: 0.9 }}
-      animate={inView ? { 
-        opacity: 1, 
-        y: 0, 
-        scale: 1,
-        transition: {
-          duration: 0.6,
-          delay: (index % 6) * 0.1,
-          ease: [0.25, 0.46, 0.45, 0.94]
-        }
-      } : { 
-        opacity: 0, 
-        y: 50, 
-        scale: 0.9 
-      }}
-      whileHover={{ 
-        y: -5, 
-        scale: 1.02,
-        boxShadow: "0 15px 30px rgba(0,0,0,0.1)",
-        transition: { duration: 0.3 }
-      }}
-      className="bg-white dark:bg-gray-900 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden cursor-pointer h-full"
-    >
-      <Link href={`/products/${product.category}/${product.id}`}>
-        <div className="relative overflow-hidden aspect-square">
-          <Image
-            src={product.cover_img[0] || 'https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=400'}
-            alt={product.name}
-            fill
-            className="object-cover transition-transform duration-500"
-            onError={(e) => {
-              const target = e.target as HTMLImageElement;
-              target.src = 'https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=400';
-            }}
-          />
-          
-          <motion.div 
-            className="absolute top-2 left-2"
-            initial={{ scale: 0, rotate: -180 }}
-            animate={inView ? { 
-              scale: 1, 
-              rotate: 0,
-              transition: {
-                delay: (index % 6) * 0.1 + 0.3,
-                duration: 0.5,
-                type: "spring",
-                stiffness: 260,
-                damping: 20
-              }
-            } : { scale: 0, rotate: -180 }}
-          >
-            <span className="px-2 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-sm">
-              🔥 Trending
-            </span>
-          </motion.div>
-
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
-        </div>
-        
-        <div className="p-3">
-          <div className="flex justify-between items-start mb-1">
-            <motion.h3 
-              className="text-sm font-semibold text-gray-900 dark:text-white line-clamp-2"
-              initial={{ opacity: 0, x: -20 }}
-              animate={inView ? { 
-                opacity: 1, 
-                x: 0,
-                transition: {
-                  delay: (index % 6) * 0.1 + 0.4,
-                  duration: 0.4
-                }
-              } : { opacity: 0, x: -20 }}
-            >
-              {product.name}
-            </motion.h3>
-            <motion.div 
-              className="flex items-center ml-1 flex-shrink-0"
-              initial={{ opacity: 0, scale: 0 }}
-              animate={inView ? { 
-                opacity: 1, 
-                scale: 1,
-                transition: {
-                  delay: (index % 6) * 0.1 + 0.5,
-                  duration: 0.3,
-                  type: "spring"
-                }
-              } : { opacity: 0, scale: 0 }}
-            >
-              <Star className="h-3 w-3 text-yellow-400 fill-current" />
-              <span className="text-xs text-gray-600 dark:text-gray-400 ml-0.5">
-                {product.rating}
-              </span>
-            </motion.div>
-          </div>
-          
-          <motion.p 
-            className="text-xs text-gray-500 dark:text-gray-400 mb-2 capitalize"
-            initial={{ opacity: 0 }}
-            animate={inView ? { 
-              opacity: 1,
-              transition: {
-                delay: (index % 6) * 0.1 + 0.6,
-                duration: 0.3
-              }
-            } : { opacity: 0 }}
-          >
-            {product.category.replace('-', ' ')}
-          </motion.p>
-          
-          <motion.div 
-            className="flex justify-between items-center mb-2"
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { 
-              opacity: 1, 
-              y: 0,
-              transition: {
-                delay: (index % 6) * 0.1 + 0.7,
-                duration: 0.4
-              }
-            } : { opacity: 0, y: 20 }}
-          >
-            <div>
-              <p className="text-sm font-bold text-amber-600 dark:text-amber-400">
-                ₹{product.price}
-              </p>
-              <p className="text-xs text-gray-500 dark:text-gray-400">
-                MOQ: {product.moq} pcs
-              </p>
-            </div>
-          </motion.div>
-        </div>
-      </Link>
-      
-      <div className="px-3 pb-3">
-        <motion.button
-          onClick={(e) => {
-            e.preventDefault();
-            handleWhatsAppInquiry(product);
-          }}
-          className="w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white py-2 px-3 rounded-md font-medium transition-all duration-300 flex items-center justify-center text-xs shadow-sm hover:shadow-md transform hover:scale-[1.02]"
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { 
-            opacity: 1, 
-            y: 0,
-            transition: {
-              delay: (index % 6) * 0.1 + 0.8,
-              duration: 0.4
-            }
-          } : { opacity: 0, y: 20 }}
-          whileHover={{ scale: 1.03 }}
-          whileTap={{ scale: 0.98 }}
-        >
-          <MessageCircle className="h-3 w-3 mr-1" />
-          Quick Inquiry
-        </motion.button>
-      </div>
-    </motion.div>
-  );
+const normalizeCoverImage = (cover_img: string | string[]): string => {
+  if (Array.isArray(cover_img)) {
+    return cover_img[0] || '';
+  }
+  return cover_img;
 };
-
 const TopProducts: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
@@ -273,9 +104,99 @@ const TopProducts: React.FC = () => {
           </motion.p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-10">
+        <div className="hidden md:grid md:grid-cols-3 gap-6 mb-10">
+          {products.map((product) => (
+            <motion.div
+              key={product.id}
+              whileHover={{ y: -5 }}
+              className="bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group"
+            >
+              <Link href={`/products/${product.category}/${product.id}`}>
+                <div className="relative">
+                  <Image
+                    src={normalizeCoverImage(product.cover_img)}
+                    alt={product.name}
+                    width={400}
+                    height={400}
+                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  {product.tags.length > 0 && (
+                    <div className="absolute top-4 left-4">
+                      <span className={`px-4 py-1 rounded-full text-xs font-medium ${
+                        product.tags[0] === 'trending' ? 
+                        'bg-gradient-to-r from-green-500 to-emerald-500 text-white' : 
+                        product.tags[0] === 'bestseller' ? 
+                        'bg-red-500 text-white' : 
+                        'bg-amber-500 text-white'
+                      }`}>
+                        {product.tags[0]}
+                      </span>
+                    </div>
+                  )}
+                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <div className="bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                      <Eye className="h-5 w-5 text-gray-600 dark:text-gray-400" />
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="p-6">
+                  <div className="flex justify-between items-start mb-2">
+                    <h3 className="text-lg font-bold text-gray-900 dark:text-white hover:text-amber-600 dark:hover:text-amber-400 transition-colors line-clamp-2 flex-1">
+                      {product.name}
+                    </h3>
+                    <div className="flex items-center ml-2">
+                      <Star className="h-4 w-4 text-yellow-400 fill-current" />
+                      <span className="text-sm text-gray-600 dark:text-gray-400 ml-1">
+                        {product.rating}
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <p className="text-sm text-gray-500 dark:text-gray-400 mb-3 line-clamp-2">
+                    {product.description}
+                  </p>
+                  
+                  <div className="flex justify-between items-center mb-4">
+                    <div>
+                      <p className="text-xl font-bold text-amber-600 dark:text-amber-400">
+                        ₹{product.price}
+                      </p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">
+                        MOQ: {product.moq} pieces
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+              
+              <div className="px-6 pb-6">
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const message = `Hi! I'm interested in wholesale inquiry for ${product.name}. MOQ: ${product.moq} pieces. Price: ₹${product.price}. Please share more details.`;
+                    const whatsappUrl = `https://wa.me/919821964539?text=${encodeURIComponent(message)}`;
+                    window.open(whatsappUrl, '_blank');
+                  }}
+                  className="w-full bg-green-500 hover:bg-green-600 text-white py-3 px-4 rounded-full font-medium transition-colors flex items-center justify-center text-base transform hover:scale-105"
+                >
+                  <MessageCircle className="h-4 w-4 mr-2" />
+                  Quick Inquiry
+                </button>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Mobile view */}
+        <div className="grid grid-cols-2 md:hidden gap-4 mb-10">
           {products.map((product, index) => (
-            <ProductCard key={product.id} product={product} index={index} />
+            <ProductCard 
+              key={product.id} 
+              product={product} 
+              viewMode="grid" 
+              href={`/products/${product.category}/${product.id}`}
+            />
           ))}
         </div>
 
