@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Star, MessageCircle, Eye, Package } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { normalizeCoverImage } from '@/lib/supabase';
+import Image from 'next/image';
 
 interface Product {
   id: string;
@@ -38,7 +39,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, viewMode }) => {
   const getTagColor = (tag: string) => {
     switch (tag) {
       case 'bestseller': return 'bg-red-500 text-white';
-      case 'trending': return 'bg-green-500 text-white';
+      case 'trending': return 'bg-gradient-to-r from-green-500 to-emerald-500 text-white';
       case 'new': return 'bg-amber-500 text-white';
       case 'premium': return 'bg-purple-500 text-white';
       default: return 'bg-gray-500 text-white';
@@ -115,68 +116,72 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, viewMode }) => {
     );
   }
 
+  // Mobile view (using the card from topproducts.tsx)
   return (
     <motion.div
       whileHover={{ y: -5 }}
-      className="bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group"
+      className="bg-white dark:bg-gray-900 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden cursor-pointer h-full"
     >
       <Link href={`/products/${product.category}/${product.id}`}>
-        <div className="relative">
-          <img
+        <div className="relative overflow-hidden aspect-square">
+          <Image
             src={coverImage}
             alt={product.name}
-            className="w-full h-48 md:h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+            fill
+            className="object-cover transition-transform duration-500"
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.src = 'https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=400';
+            }}
           />
+          
           {product.tags.length > 0 && (
-            <div className="absolute top-3 md:top-4 left-3 md:left-4">
-              <span className={`px-3 md:px-4 py-1 rounded-full text-xs font-medium ${getTagColor(product.tags[0])}`}>
+            <div className="absolute top-2 left-2">
+              <span className={`px-2 py-1 rounded-full text-xs font-medium ${getTagColor(product.tags[0])} shadow-sm`}>
                 {product.tags[0]}
               </span>
             </div>
           )}
-          <div className="absolute top-3 md:top-4 right-3 md:right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-            <div className="bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
-              <Eye className="h-4 w-4 md:h-5 md:w-5 text-gray-600 dark:text-gray-400" />
-            </div>
-          </div>
+
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
         </div>
         
-        <div className="p-4 md:p-6">
-          <div className="flex justify-between items-start mb-2">
-            <h3 className="text-base md:text-lg font-bold text-gray-900 dark:text-white hover:text-amber-600 dark:hover:text-amber-400 transition-colors line-clamp-2 flex-1">
+        <div className="p-3">
+          <div className="flex justify-between items-start mb-1">
+            <h3 className="text-sm font-semibold text-gray-900 dark:text-white line-clamp-2">
               {product.name}
             </h3>
-            <div className="flex items-center ml-2">
-              <Star className="h-3 w-3 md:h-4 md:w-4 text-yellow-400 fill-current" />
-              <span className="text-xs md:text-sm text-gray-600 dark:text-gray-400 ml-1">
+            <div className="flex items-center ml-1 flex-shrink-0">
+              <Star className="h-3 w-3 text-yellow-400 fill-current" />
+              <span className="text-xs text-gray-600 dark:text-gray-400 ml-0.5">
                 {product.rating}
               </span>
             </div>
           </div>
           
-          <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400 mb-3 line-clamp-2">
-            {product.description}
+          <p className="text-xs text-gray-500 dark:text-gray-400 mb-2 capitalize">
+            {product.category.replace('-', ' ')}
           </p>
           
-          <div className="flex justify-between items-center mb-4">
+          <div className="flex justify-between items-center mb-2">
             <div>
-              <p className="text-lg md:text-xl font-bold text-amber-600 dark:text-amber-400">
+              <p className="text-sm font-bold text-amber-600 dark:text-amber-400">
                 ₹{product.price}
               </p>
-              <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400">
-                MOQ: {product.moq} pieces
+              <p className="text-xs text-gray-500 dark:text-gray-400">
+                MOQ: {product.moq} pcs
               </p>
             </div>
           </div>
         </div>
       </Link>
       
-      <div className="px-4 md:px-6 pb-4 md:pb-6">
+      <div className="px-3 pb-3">
         <button
           onClick={handleWhatsAppInquiry}
-          className="w-full bg-green-500 hover:bg-green-600 text-white py-3 px-4 rounded-full font-medium transition-colors flex items-center justify-center text-sm md:text-base transform hover:scale-105"
+          className="w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white py-2 px-3 rounded-md font-medium transition-all duration-300 flex items-center justify-center text-xs shadow-sm hover:shadow-md transform hover:scale-[1.02]"
         >
-          <MessageCircle className="h-3 w-3 md:h-4 md:w-4 mr-2" />
+          <MessageCircle className="h-3 w-3 mr-1" />
           Quick Inquiry
         </button>
       </div>
